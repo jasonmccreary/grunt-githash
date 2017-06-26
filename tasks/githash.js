@@ -20,22 +20,22 @@ module.exports = function (grunt) {
 
     var options = this.options({
       // Break if not inside a git repository
-      fail: true
+      fail: true,
+      length: 7
     });
     var dir = path.resolve(options.dir || '.');
     var done = this.async();
 
     Promise.all([
-      git.shortAsync(dir),
       git.longAsync(dir),
       git.tagAsync(dir),
       git.branchAsync(dir)
       ]).then(function(args){
       return {
-        short: args[0],
-        long: args[1],
-        tag: args[2],
-        branch: args[3]
+        short: args[0].substr(0, options.length),
+        long: args[0],
+        tag: args[1],
+        branch: args[2]
       };
     }).catch(function(err) {
       grunt.log.warn('Could not read git information: ' + err);
