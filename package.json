@@ -1,22 +1,27 @@
 {
-  "name": "grunt-githash",
-  "version": "0.1.3",
+  "name": "grunt-githash-2",
+  "version": "0.2.0",
   "description": "Grunt plugin to get the current git hash, branch and tag",
-  "homepage": "https://github.com/jantimon/grunt-githash",
-  "repository": "https://github.com/jantimon/grunt-githash.git",
+  "homepage": "https://github.com/jasonmccreary/grunt-githash-2",
+  "repository": "https://github.com/jasonmccreary/grunt-githash-2.git",
   "author": {
-    "name": "Jan Nicklas",
-    "email": "j.nicklas@me.com",
-    "url": ""
+    "name": "Jason McCreary",
+    "email": "jason@pureconcepts.net",
+    "url": "https://jason.pureconepts.net"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "git"
   ],
   "main": "Gruntfile.js",
   "engines": {
     "node": ">= 0.8.0"
   },
   "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "git-rev-2": "^0.1.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-cli": "^0.1.13",
@@ -29,9 +34,5 @@
   },
   "scripts": {
     "test": "grunt test"
-  },
-  "dependencies": {
-    "bluebird": "^3.0.5",
-    "git-rev-2": "^0.1.0"
   }
 }
